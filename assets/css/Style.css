@@ -1,0 +1,257 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.container {
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+}
+.information {
+  border: 2px solid #000;
+  display: flex;
+}
+.information__user {
+  padding: 54px 68px 28px 68px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.information__user-logo {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 20px;
+  left: 20px;
+  object-fit: cover;
+}
+.information__user-img {
+  width: 228px;
+  height: 228px;
+  object-fit: cover;
+  border: none;
+  border-radius: 50%;
+}
+.information__user-name {
+  font-family: sans-serif;
+  font-size: 22px;
+  font-weight: 200;
+  color: #228b22;
+  line-height: 40px;
+}
+.information__user-position {
+  font-size: 28px;
+  font-family: sans-serif;
+  font-weight: 700;
+}
+.information__contract {
+  padding-top: 54px;
+  padding-right: 36px;
+  display: flex;
+  flex-direction: column;
+}
+.information__contract-name {
+  font-family: sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  padding: 8px 0;
+  position: relative;
+  background-color: #fff;
+}
+
+.information__contract-name-wrap {
+  border-left: 2px solid #fff;
+}
+.information__contract-name::after {
+  content: "";
+  position: absolute;
+  top: -54px;
+  left: -2px;
+  width: 50px;
+  height: 384px;
+  background-color: #228b22;
+  z-index: -1;
+  border-left: 2px solid #000;
+  border-right: 2px solid #000;
+}
+.information__contract-position {
+  font-family: sans-serif;
+  font-size: 12px;
+  padding-bottom: 8px;
+  color: #228b22;
+  background-color: #fff;
+}
+.information__contract-description {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.information__contract-description--pay {
+  display: flex;
+  align-items: center;
+}
+
+.information__contract-description--pay-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.information__contract-description--icon {
+  font-size: 36px;
+  padding-left: 8px;
+  padding-right: 32px;
+  color: #000;
+}
+.information__contract-description--pay-name {
+  font-family: sans-serif;
+  font-size: 14px;
+  color: #228b22;
+  line-height: 24px;
+}
+.information__contract-description--pay-number {
+  font-family: sans-serif;
+  font-size: 18px;
+  color: #228b22;
+}
+.information__contract-description--call {
+  display: flex;
+  align-items: center;
+}
+
+.information__contract-description--call_wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.information__contract-description--call_wrap a {
+  font-size: 18px;
+  text-decoration: none;
+  color: #228b22;
+}
+
+.information__contract-description-network {
+  display: flex;
+  align-items: center;
+}
+
+.information__contract-description-network-wrap,
+.information__contract-description-network-wrap a {
+  font-size: 18px;
+  text-decoration: none;
+  color: #228b22;
+}
+
+.information__contract-description-network-zl img {
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 1023px) {
+  body {
+    background-color: #60bb47;
+  }
+  .container {
+    padding-top: 60px;
+  }
+
+  .information {
+    border: none;
+    flex-direction: column;
+  }
+
+  .information__user {
+    padding: 0;
+  }
+
+  .information__user-name {
+    font-weight: 700;
+    color: #000;
+    font-family: sans-serif;
+    font-size: 24px;
+    padding-top: 6px;
+    user-select: none;
+  }
+
+  .information__contract-name::after {
+    display: none;
+  }
+
+  .information__contract-name-wrap {
+    display: none;
+  }
+
+  .information__user-logo {
+    top: -34px;
+    left: 8px;
+    border-radius: 50%;
+  }
+
+  .information__contract {
+    padding-top: 10px;
+    padding-right: 0;
+  }
+
+  .information__contract-description--icon {
+    padding: 8px 14px 8px 8px;
+    color: #999;
+  }
+
+  .information__user-position {
+    color: #000;
+    font-family: "Russo One", sans-serif;
+    font-weight: 100;
+    letter-spacing: 0;
+    color: rgba(0, 0, 0, 0.6);
+    text-shadow: 2px 8px 6px rgba(0, 0, 0, 0.2),
+      0px -5px 35px rgba(255, 255, 255, 0.3);
+    user-select: none;
+    font-size: 26px;
+  }
+
+  .information__user-img {
+    filter: drop-shadow(0 0 2px #999);
+  }
+
+  .information__contract-description--pay-name {
+    font-size: 16px;
+  }
+
+  .information__contract-description--pay-name,
+  .information__contract-description--pay-number,
+  .information__contract-description--call_wrap a,
+  .information__contract-description-network-wrap,
+  .information__contract-description-network-wrap a {
+    color: #999;
+  }
+
+  .information__contract-description--pay {
+    padding: 0 20px;
+    margin: 4px 0;
+    background-color: #fff;
+  }
+
+  .information__contract-description--call {
+    padding: 0 20px;
+    margin: 4px 0;
+    background-color: #fff;
+  }
+
+  .information__contract-description--call,
+  .information__contract-description--pay,
+  .information__contract-description-network {
+    padding: 0 4px;
+    margin: 8px 0;
+    background-color: #fff;
+    border-radius: 10px;
+  }
+}
